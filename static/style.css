@@ -1,0 +1,150 @@
+/* ===== GLOBAL STYLE ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    width: 85%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* ===== TITLE ===== */
+h1 {
+    color: #00f5ff;
+    margin-bottom: 30px;
+    font-size: 40px;
+    text-shadow: 0 0 15px #00f5ff;
+}
+
+/* ===== CARD DESIGN ===== */
+.card {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #ff00ff;
+    margin-bottom: 40px;
+}
+
+/* ===== FORM HEADINGS ===== */
+.card h2 {
+    margin-bottom: 20px;
+    color: #ff00ff;
+}
+
+/* ===== FORM INPUTS ===== */
+input {
+    padding: 12px;
+    margin: 10px;
+    width: 220px;
+    border-radius: 8px;
+    border: 2px solid #00f5ff;
+    background-color: #000;
+    color: #fff;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+    outline: none;
+}
+
+/* ===== BUTTON ===== */
+button {
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    background: #00f5ff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00f5ff;
+}
+
+button:hover {
+    background: #ff00ff;
+    color: white;
+    box-shadow: 0 0 15px #ff00ff;
+    transform: scale(1.05);
+}
+
+/* ===== TABLE CONTAINER ===== */
+.table-container {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00f5ff;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* ===== TABLE HEADER ===== */
+th {
+    background: #00f5ff;
+    color: black;
+    padding: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== TABLE DATA ===== */
+td {
+    padding: 14px;
+    border-bottom: 1px solid #333;
+}
+
+/* ===== ROW HOVER ===== */
+tr:hover {
+    background-color: #262626;
+}
+
+/* ===== EDIT BUTTON ===== */
+.edit-btn {
+    display: inline-block;
+    background: #00e5ff;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 8px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00e5ff;
+}
+
+.edit-btn:hover {
+    background: #00bcd4;
+    color: white;
+    box-shadow: 0 0 15px #00e5ff;
+    transform: scale(1.05);
+}
+
+/* ===== DELETE BUTTON ===== */
+.delete-btn {
+    display: inline-block;
+    background: #ff1744;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #ff1744;
+}
+
+.delete-btn:hover {
+    background: #d50000;
+    box-shadow: 0 0 15px #ff1744;
+    transform: scale(1.05);
+}

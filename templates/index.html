@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎓 Student Management System</h1>
+
+    <div class="card">
+        <h2>
+            {% if student_to_edit %}
+                ✏️ Update Student
+            {% else %}
+                ➕ Add New Student
+            {% endif %}
+        </h2>
+
+        <form action="{% if student_to_edit %}/update{% else %}/add{% endif %}" method="POST">
+            
+            <input type="text" name="name"
+                   placeholder="Student Name"
+                   value="{{ student_to_edit.name if student_to_edit }}"
+                   required>
+
+            <input type="text" name="student_id"
+                   placeholder="Student ID"
+                   value="{{ student_to_edit.student_id if student_to_edit }}"
+                   {% if student_to_edit %} readonly {% endif %}
+                   required>
+
+            <input type="text" name="grade"
+                   placeholder="Grade"
+                   value="{{ student_to_edit.grade if student_to_edit }}"
+                   required>
+
+            <button type="submit">
+                {% if student_to_edit %}
+                    Update Student
+                {% else %}
+                    Add Student
+                {% endif %}
+            </button>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <h2>📋 Student Records</h2>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Grade</th>
+                <th>Actions</th>
+            </tr>
+
+            {% for student in students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.student_id }}</td>
+                <td>{{ student.grade }}</td>
+                <td>
+                    <a href="/?edit={{ student.student_id }}" class="edit-btn">
+                        Edit
+                    </a>
+
+                    <a href="/delete/{{ student.student_id }}" class="delete-btn">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
